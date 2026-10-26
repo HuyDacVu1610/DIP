@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "provenance": "Synthetic images generated locally by experiments/create_fixtures.py; no personal images or external downloads.",
+  "corner_order": [
+    "top_left",
+    "top_right",
+    "bottom_right",
+    "bottom_left"
+  ],
+  "corner_samples": [
+    [
+      12,
+      12
+    ],
+    [
+      83,
+      12
+    ],
+    [
+      83,
+      51
+    ],
+    [
+      12,
+      51
+    ]
+  ],
+  "jpeg_rgb_tolerance": 3,
+  "notes": [
+    "size is the encoded raster size, before EXIF; normalized_* are expectations for MVP02.03, not current output.",
+    "header_only probes intentionally have inconsistent pixel payloads; never load them.",
+    "pixel_limit.png is a valid 16 MP solid raster compressed row by row without a large allocation.",
+    "Byte-quota tests pad a small valid PNG in memory; no >15 MiB fixture is stored in Git."
+  ],
+  "fixtures": [
+    {
+      "path": "corners_rgb.png",
+      "kind": "image",
+      "expected": {
+        "validation": "accept",
+        "format": "PNG",
+        "size": [
+          96,
+          64
+        ],
+        "mode": "RGB",
+        "frames": 1,
+        "corners_rgb": [
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            255
+          ],
+          [
+            255,
+            255,
+            0
+          ]
+        ]
+      },
+      "byte_count": 237,
+      "sha256": "8f497a77b28c22666fcc7162ab6c2846b11449eb7d46c20d389bbd226a11769c"
+    },
+    {
+      "path": "corners_rgb.jpg",
+      "kind": "image",
+      "expected": {
+        "validation": "accept",
+        "format": "JPEG",
+        "size": [
+          96,
+          64
+        ],
+        "mode": "RGB",
+        "frames": 1,
+        "corners_rgb": [
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            255
+          ],
+          [
+            255,
+            255,
+            0
+          ]
+        ]
+      },
+      "byte_count": 903,
+      "sha256": "04fe0b21e4bf82f49101b02a5c8e5b0b10e7d40eb54d2dd7ded0869597fa7289"
+    },
+    {
+      "path": "exif_6.jpg",
+      "kind": "image",
+      "expected": {
+        "validation": "accept",
+        "format": "JPEG",
+        "size": [
+          96,
+          64
+        ],
+        "mode": "RGB",
+        "frames": 1,
+        "corners_rgb": [
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            255
+          ],
+          [
+            255,
+            255,
+            0
+          ]
+        ],
+        "exif_orientation": 6,
+        "normalized_size": [
+          64,
+          96
+        ],
+        "normalized_corners_rgb": [
+          [
+            255,
+            255,
+            0
+          ],
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            255
+          ]
+        ]
+      },
+      "byte_count": 939,
+      "sha256": "e770e139877226996bbdaca3ad4a15162d68fa622b010f519f1e437426c0f647"
+    },
+    {
+      "path": "exif_2.jpg",
+      "kind": "image",
+      "expected": {
+        "validation": "accept",
+        "format": "JPEG",
+        "size": [
+          96,
+          64
+        ],
+        "mode": "RGB",
+        "frames": 1,
+        "corners_rgb": [
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            255
+          ],
+          [
+            255,
+            255,
+            0
+          ]
+        ],
+        "exif_orientation": 2,
+        "normalized_size": [
+          96,
+          64
+        ],
+        "normalized_corners_rgb": [
+          [
+            0,
+            255,
+            0
+          ],
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            255,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            255
+          ]
+        ]
+      },
+      "byte_count": 939,
+      "sha256": "e20a7adf8f97fd9374340627e1325dc7c97bd641146ac7829ab8fc7526445bc5"
+    },
+    {
+      "path": "alpha_rgba.png",
+      "kind": "image",
+      "expected": {
+        "validation": "accept",
+        "format": "PNG",
+        "size": [
+          4,
+          2
+        ],
+        "mode": "RGBA",
+        "frames": 1,
+        "white_background_rgb_row": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            127,
+            127
+          ],
+          [
+            0,
+            0,
+            255
+          ],
+          [
+            0,
+            255,
+            0
+          ]
+        ]
+      },
+      "byte_count": 83,
+      "sha256": "4548295ba50f71b5132caefdf17988eb8e29077c0a6504d420f1425aacebe9c0"
+    },
+    {
+      "path": "alpha_palette.png",
+      "kind": "image",
+      "expected": {
+        "validation": "accept",
+        "format": "PNG",
+        "size": [
+          4,
+          2
+        ],
+        "mode": "P",
+        "frames": 1,
+        "transparent_index": 0,
+        "white_background_rgb_row": [
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            255,
+            255,
+            255
+          ],
+          [
+            0,
+            0,
+            255
+          ]
+        ]
+      },
+      "byte_count": 865,
+      "sha256": "f21b222cf5e0747f65cba6eca8a3e2c49133c1d608efef467afa0fe72cab0ce1"
+    },
+    {
+      "path": "gray.png",
+      "kind": "image",
+      "expected": {
+        "validation": "accept",
+        "format": "PNG",
+        "size": [
+          4,
+          2
+        ],
+        "mode": "L",
+        "frames": 1,
+        "gray_value": 73
+      },
+      "byte_count": 75,
+      "sha256": "852b7a07209d163fd3ac205545564236dd27863fe9661060b001ce7a3292d48e"
+    },
+    {
+      "path": "minimum.png",
+      "kind": "image",
+      "expected": {
+        "validation": "accept",
+        "format": "PNG",
+        "size": [
+          2,
+          2
+        ],
+        "mode": "RGB",
+        "frames": 1
+      },
+      "byte_count": 76,
+      "sha256": "af9cb484e25836824f7bf5adede1e0ce33aea0abaae1e8978b5ec30e99ca27f1"
+    },
+    {
+      "path": "too_narrow.png",
+      "kind": "image",
+      "expected": {
+        "validation": "reject",
+        "error_code": "IMAGE_TOO_SMALL",
+        "size": [
+          1,
+          4
+        ]
+      },
+      "byte_count": 75,
+      "sha256": "a83447dd936f817868308aa8cbc8495ec23e55d58a66b97e357ac96481d0f6a6"
+    },
+    {
+      "path": "too_short.png",
+      "kind": "image",
+      "expected": {
+        "validation": "reject",
+        "error_code": "IMAGE_TOO_SMALL",
+        "size": [
+          4,
+          1
+        ]
+      },
+      "byte_count": 72,
+      "sha256": "9d397cabfa9e6b2b19e714ccd31849f5e604ecd1ebf12616ae9168a5d43eb216"
+    },
+    {
+      "path": "png_named_jpeg.jpg",
+      "kind": "image",
+      "expected": {
+        "validation": "accept",
+        "format": "PNG",
+        "size": [
+          96,
+          64
+        ],
+        "mode": "RGB",
+        "frames": 1,
+        "corners_rgb": [
+          [
+            255,
+            0,
+            0
+          ],
+          [
+            0,
+            255,
+            0
+          ],
+          [
+            0,
+            0,
+            255
+          ],
+          [
+            255,
+            255,
+            0
+          ]
+        ]
+      },
+      "byte_count": 237,
+      "sha256": "8f497a77b28c22666fcc7162ab6c2846b11449eb7d46c20d389bbd226a11769c"
+    },
+    {
+      "path": "animated.png",
+      "kind": "image",
+      "expected": {
+        "validation": "reject",
+        "error_code": "MULTI_FRAME_IMAGE",
+        "frames": 2
+      },
+      "byte_count": 390,
+      "sha256": "f088f7ca31b0e2c87247c63ea12607cf790b55ee9fed45d724146efc480a4523"
+    },
+    {
+      "path": "unsupported.bmp",
+      "kind": "image",
+      "expected": {
+        "validation": "reject",
+        "error_code": "UNSUPPORTED_FORMAT",
+        "format": "BMP"
+      },
+      "byte_count": 18486,
+      "sha256": "4690fedb0e9a9199dca4f0d5b1e10152d9ce1fd74d3953f9e053f8f92a7f02a9"
+    },
+    {
+      "path": "fake.jpg",
+      "kind": "invalid",
+      "expected": {
+        "validation": "reject",
+        "error_code": "UNSUPPORTED_FORMAT"
+      },
+      "byte_count": 36,
+      "sha256": "ef7f0718c7a8a9a450755abfd5c790ea96c90ef300dc2fcca7c9dfc10a35a39a"
+    },
+    {
+      "path": "broken_header.png",
+      "kind": "invalid",
+      "expected": {
+        "validation": "reject",
+        "error_code": "INVALID_IMAGE"
+      },
+      "byte_count": 21,
+      "sha256": "9d10472af8b04b6593a5199b749a99d7f50f4fa3170adf3a1664868b7b1a5904"
+    },
+    {
+      "path": "broken_header.jpg",
+      "kind": "invalid",
+      "expected": {
+        "validation": "reject",
+        "error_code": "INVALID_IMAGE"
+      },
+      "byte_count": 11,
+      "sha256": "f5980b1efc5aa2a12383a18005f0cc77edd9c2270a1a1bfda9fdb2f3e23cc7a1"
+    },
+    {
+      "path": "broken_crc.png",
+      "kind": "invalid",
+      "expected": {
+        "validation": "reject",
+        "error_code": "INVALID_IMAGE"
+      },
+      "byte_count": 237,
+      "sha256": "80bf2091059ae578939c08f3e898aeb0f7ca6c355da657e67ece4a6125397a6f"
+    },
+    {
+      "path": "truncated.png",
+      "kind": "invalid",
+      "expected": {
+        "validation": "reject",
+        "error_code": "INVALID_IMAGE"
+      },
+      "byte_count": 222,
+      "sha256": "49612b135b860b39df2c92207310227abf1e5090b323c394efcf7e3b65487f30"
+    },
+    {
+      "path": "pixel_limit.png",
+      "kind": "image",
+      "expected": {
+        "validation": "accept",
+        "format": "PNG",
+        "size": [
+          4000,
+          4000
+        ],
+        "mode": "RGB",
+        "frames": 1
+      },
+      "byte_count": 56294,
+      "sha256": "9817f3e3d7b3b36f545c1afce41a4e8d413d8f295e1c6b91100d9edc8138ea0c"
+    },
+    {
+      "path": "pixel_over.png",
+      "kind": "header_only",
+      "expected": {
+        "validation": "reject",
+        "error_code": "TOO_MANY_PIXELS",
+        "size": [
+          4001,
+          4000
+        ]
+      },
+      "byte_count": 237,
+      "sha256": "0df4382634a581187e906e916615e0eaf4c98f05bf12de245c912c0e10512e87"
+    },
+    {
+      "path": "bomb_warning.png",
+      "kind": "header_only",
+      "expected": {
+        "validation": "reject",
+        "error_code": "TOO_MANY_PIXELS",
+        "size": [
+          10000,
+          10000
+        ]
+      },
+      "byte_count": 237,
+      "sha256": "0960ff4986a619021127055c721c14799f6123cd53a80cdfbbbb982542072194"
+    },
+    {
+      "path": "bomb_error.png",
+      "kind": "header_only",
+      "expected": {
+        "validation": "reject",
+        "error_code": "TOO_MANY_PIXELS",
+        "size": [
+          20000,
+          20000
+        ]
+      },
+      "byte_count": 237,
+      "sha256": "72b7a88f97fd55d0c9b164412c8c6df0e0620566920e67a97973b24b17e93806"
+    }
+  ]
+}

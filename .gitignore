@@ -1,0 +1,61 @@
+# Python environment and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+*.egg-info/
+
+# Frontend dependencies and generated output
+node_modules/
+dist/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# Runtime data, private datasets and temporary files
+/data/
+/datasets/
+/experiments/data/
+/experiments/results/
+/.tmp/
+/output/
+/.chart-data-*/
+/.codex-finalizer/
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.tmp
+*.log
+
+# User-provided local image for manual checks; synthetic fixtures stay tracked
+/pngtree-a-piece-of-tiled-white-a4-paper-image_1050989.jpg
+
+# Local settings and secrets; examples may be versioned
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local editor and operating-system files
+.idea/
+.vscode/
+*.swp
+*.swo
+~$*
+.DS_Store
+Thumbs.db
+Desktop.ini

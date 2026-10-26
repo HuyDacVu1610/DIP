@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "experiment_version": "detection-ablation-v1",
+  "preset": "revised",
+  "reference": "scoring",
+  "profiles": [
+    {"id": "scoring", "selection": "scoring", "gaussian_kernel": 5, "closing": true},
+    {"id": "largest_contour", "selection": "largest_contour", "gaussian_kernel": 5, "closing": true},
+    {"id": "no_gaussian", "selection": "scoring", "gaussian_kernel": 0, "closing": true},
+    {"id": "no_closing", "selection": "scoring", "gaussian_kernel": 5, "closing": false}
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "coordinates": "normalized_w_minus_1_h_minus_1",
+  "records": [
+    {
+      "image_id": "img_001",
+      "normalized_sha256": "d3df984ef62391031933cf23739ffe02bbef8ca0aa3c8c2e2e77d83fa13752f0",
+      "width": 1536,
+      "height": 2048,
+      "status": "unlabelable",
+      "corners": null,
+      "reason": "Góc trái trên gấp lật, mép trên bị gãy; không có bốn góc phẳng rõ ràng để đại diện toàn trang. Không suy diễn góc trước khi gấp.",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Chọn mốc góc bằng quan sát nguồn sau EXIF, không dùng detector. Góc bo nhẹ lấy mốc chỗ chuyển hai mép; sai số gán tay chưa được đo bằng nhiều người gán."
+    },
+    {
+      "image_id": "img_002",
+      "normalized_sha256": "bae9c7f1b33137c32e914b6d6099fec45377e83108ee54165ad457adea18bb11",
+      "width": 1536,
+      "height": 2048,
+      "status": "unlabelable",
+      "corners": null,
+      "reason": "Góc dưới trái chạm/cắt mép khung ảnh; không quan sát trọn vùng cong nối hai mép giấy để chọn mốc góc đáng tin cậy.",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Chọn mốc góc bằng quan sát nguồn sau EXIF, không dùng detector. Góc bo nhẹ lấy mốc chỗ chuyển hai mép; sai số gán tay chưa được đo bằng nhiều người gán."
+    },
+    {
+      "image_id": "img_003",
+      "normalized_sha256": "dbeec98eea66ca1cc1410694b6218c5361520f0c50ec88af280305722bc675bc",
+      "width": 1536,
+      "height": 2048,
+      "status": "labeled",
+      "corners": [
+        [
+          0.3485342019543974,
+          0.2598925256472887
+        ],
+        [
+          0.8078175895765473,
+          0.29653150952613583
+        ],
+        [
+          0.6807817589576547,
+          0.9193942354665364
+        ],
+        [
+          0.11465798045602606,
+          0.8075232046897899
+        ]
+      ],
+      "reason": "",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Chọn mốc góc bằng quan sát nguồn sau EXIF, không dùng detector. Góc bo nhẹ lấy mốc chỗ chuyển hai mép; sai số gán tay chưa được đo bằng nhiều người gán."
+    },
+    {
+      "image_id": "img_004",
+      "normalized_sha256": "591f979085eb4992b58ba8a28035e389192c6da5daecfae7f86804d6542e8434",
+      "width": 1536,
+      "height": 2048,
+      "status": "labeled",
+      "corners": [
+        [
+          0.2814332247557003,
+          0.3165608207132389
+        ],
+        [
+          0.7283387622149837,
+          0.3126526624328285
+        ],
+        [
+          0.867100977198697,
+          0.903761602344895
+        ],
+        [
+          0.13876221498371336,
+          0.9018075232046898
+        ]
+      ],
+      "reason": "",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Chọn mốc góc bằng quan sát nguồn sau EXIF, không dùng detector. Góc bo nhẹ lấy mốc chỗ chuyển hai mép; sai số gán tay chưa được đo bằng nhiều người gán."
+    },
+    {
+      "image_id": "img_005",
+      "normalized_sha256": "13133fe2811e0c1325aea34015536347eaec38e1d48158e9edd8ef38eee842b9",
+      "width": 1536,
+      "height": 2048,
+      "status": "labeled",
+      "corners": [
+        [
+          0.012377850162866449,
+          0.36492427943331707
+        ],
+        [
+          0.7205211726384365,
+          0.27796775769418663
+        ],
+        [
+          0.9661237785016287,
+          0.550561797752809
+        ],
+        [
+          0.11726384364820847,
+          0.7542745481191988
+        ]
+      ],
+      "reason": "",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Chọn mốc góc bằng quan sát nguồn sau EXIF, không dùng detector. Góc bo nhẹ lấy mốc chỗ chuyển hai mép; sai số gán tay chưa được đo bằng nhiều người gán."
+    },
+    {
+      "image_id": "img_006",
+      "normalized_sha256": "618449c2639ae32a8c341f26b8fa50be906890e48bfad8425198bd9e2f7d0096",
+      "width": 1536,
+      "height": 2048,
+      "status": "unlabelable",
+      "corners": null,
+      "reason": "Góc trái trên gấp lật làm trang không phẳng và mép trên gãy; không suy diễn góc phẳng từ nếp gấp.",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Chọn mốc góc bằng quan sát nguồn sau EXIF, không dùng detector. Góc bo nhẹ lấy mốc chỗ chuyển hai mép; sai số gán tay chưa được đo bằng nhiều người gán."
+    },
+    {
+      "image_id": "img_007",
+      "normalized_sha256": "0a8bd642da48990afb67f4bb9f773e6fbb57dec5054e52930611fcf4bf34ba7b",
+      "width": 1536,
+      "height": 2048,
+      "status": "labeled",
+      "corners": [
+        [
+          0.26775244299674267,
+          0.17537860283341475
+        ],
+        [
+          0.8755700325732899,
+          0.1875915974596971
+        ],
+        [
+          0.8846905537459283,
+          0.8202247191011236
+        ],
+        [
+          0.2781758957654723,
+          0.8422081094284318
+        ]
+      ],
+      "reason": "",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Gán thủ công theo bốn góc ngoài của giấy trên PNG sau EXIF; không chạy detector hoặc tune bằng ảnh test. Giấy có nếp/curl nhẹ: quad xấp xỉ bốn mốc, không phải đường bao phân đoạn chính xác; một người gán và tự rà, chưa đo sai số liên người."
+    },
+    {
+      "image_id": "img_008",
+      "normalized_sha256": "9015df647933ec1ddbd22552243cd812b5febcd8ddb67a2d1005e4acffdf2ac6",
+      "width": 1536,
+      "height": 2048,
+      "status": "labeled",
+      "corners": [
+        [
+          0.2,
+          0.17293600390815828
+        ],
+        [
+          0.7752442996742671,
+          0.1797752808988764
+        ],
+        [
+          0.7680781758957654,
+          0.7801660967269174
+        ],
+        [
+          0.2013029315960912,
+          0.782608695652174
+        ]
+      ],
+      "reason": "",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Gán thủ công theo bốn góc ngoài của giấy trên PNG sau EXIF; không chạy detector hoặc tune bằng ảnh test. Giấy có nếp/curl nhẹ: quad xấp xỉ bốn mốc, không phải đường bao phân đoạn chính xác; một người gán và tự rà, chưa đo sai số liên người."
+    },
+    {
+      "image_id": "img_009",
+      "normalized_sha256": "1db58ec0d47addf2d044ef441c439b6e617d0489cf2cd86a29c50cccc58c2bff",
+      "width": 1536,
+      "height": 2048,
+      "status": "labeled",
+      "corners": [
+        [
+          0.22280130293159608,
+          0.1700048851978505
+        ],
+        [
+          0.7140065146579805,
+          0.1709819247679531
+        ],
+        [
+          0.8755700325732899,
+          0.6736687835857352
+        ],
+        [
+          0.08794788273615635,
+          0.6873473375671715
+        ]
+      ],
+      "reason": "",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Gán thủ công theo bốn góc ngoài của giấy trên PNG sau EXIF; không chạy detector hoặc tune bằng ảnh test. Giấy có nếp/curl nhẹ: quad xấp xỉ bốn mốc, không phải đường bao phân đoạn chính xác; một người gán và tự rà, chưa đo sai số liên người."
+    },
+    {
+      "image_id": "img_010",
+      "normalized_sha256": "efa7c056c3578f91168305fe072dad9604c01e851cce6ecc563c8d025e655a28",
+      "width": 1536,
+      "height": 2048,
+      "status": "labeled",
+      "corners": [
+        [
+          0.20912052117263843,
+          0.1802638006839277
+        ],
+        [
+          0.7674267100977199,
+          0.15095261358085002
+        ],
+        [
+          0.7921824104234527,
+          0.761113825109917
+        ],
+        [
+          0.23061889250814332,
+          0.7586712261846604
+        ]
+      ],
+      "reason": "",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Gán thủ công theo bốn góc ngoài của giấy trên PNG sau EXIF; không chạy detector hoặc tune bằng ảnh test. Giấy có nếp/curl nhẹ: quad xấp xỉ bốn mốc, không phải đường bao phân đoạn chính xác; một người gán và tự rà, chưa đo sai số liên người."
+    },
+    {
+      "image_id": "img_011",
+      "normalized_sha256": "31ae37180ed5bdaac854e4921e0fff423b9d9cc704c37bd1a6cfd6bb9f187671",
+      "width": 2048,
+      "height": 1536,
+      "status": "labeled",
+      "corners": [
+        [
+          0.17733268197361993,
+          0.23843648208469057
+        ],
+        [
+          0.7508549096238397,
+          0.22280130293159608
+        ],
+        [
+          0.8089887640449438,
+          0.8039087947882736
+        ],
+        [
+          0.08500244259892525,
+          0.7915309446254072
+        ]
+      ],
+      "reason": "",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Gán thủ công theo bốn góc ngoài của giấy trên PNG sau EXIF; không chạy detector hoặc tune bằng ảnh test. Giấy có nếp/curl nhẹ: quad xấp xỉ bốn mốc, không phải đường bao phân đoạn chính xác; một người gán và tự rà, chưa đo sai số liên người."
+    },
+    {
+      "image_id": "img_012",
+      "normalized_sha256": "0c1832d90aa953b0ea36c4c9ef22fd458d196d1be29570a3f876c7d4df60c380",
+      "width": 1536,
+      "height": 2048,
+      "status": "labeled",
+      "corners": [
+        [
+          0.11530944625407166,
+          0.1172447484123107
+        ],
+        [
+          0.8371335504885994,
+          0.10991695163654128
+        ],
+        [
+          0.8254071661237785,
+          0.8539325842696629
+        ],
+        [
+          0.14332247557003258,
+          0.8549096238397655
+        ]
+      ],
+      "reason": "",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Gán thủ công theo bốn góc ngoài của giấy trên PNG sau EXIF; không chạy detector hoặc tune bằng ảnh test. Giấy có nếp/curl nhẹ: quad xấp xỉ bốn mốc, không phải đường bao phân đoạn chính xác; một người gán và tự rà, chưa đo sai số liên người."
+    },
+    {
+      "image_id": "img_013",
+      "normalized_sha256": "664fc94bd4f8f36b91e6c9c68af9b1d8e9846c6644b031fa28121e9ff56cba1b",
+      "width": 1536,
+      "height": 2048,
+      "status": "labeled",
+      "corners": [
+        [
+          0.2045602605863192,
+          0.12017586712261846
+        ],
+        [
+          0.7752442996742671,
+          0.11480214948705422
+        ],
+        [
+          0.8872964169381108,
+          0.7532975085490963
+        ],
+        [
+          0.11335504885993486,
+          0.7601367855398143
+        ]
+      ],
+      "reason": "",
+      "reviewed": true,
+      "labeler": "codex_manual_visual_v1",
+      "notes": "Gán thủ công theo bốn góc ngoài của giấy trên PNG sau EXIF; không chạy detector hoặc tune bằng ảnh test. Giấy có nếp/curl nhẹ: quad xấp xỉ bốn mốc, không phải đường bao phân đoạn chính xác; một người gán và tự rà, chưa đo sai số liên người."
+    }
+  ]
+}

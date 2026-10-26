@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "measured_dataset": false,
+  "purpose": "UI rehearsal and algorithm explanation, no accuracy or robustness claim",
+  "no_boundary_note": "Uniform image; use whole-image manual selection. Not a photographed page.",
+  "fold_note": "Brightness stripe on a planar polygon only; not physical folds or dewarping evidence.",
+  "files": [
+    {
+      "file": "01-clean.png",
+      "width": 900,
+      "height": 1100,
+      "sha256": "bd039ab5ed87f42a275db2d7436d43d57b21065dcc3c036e6b8236ffa812751b",
+      "construction_corners": [
+        [
+          0.1557285873192436,
+          0.09099181073703366
+        ],
+        [
+          0.8008898776418243,
+          0.13193812556869883
+        ],
+        [
+          0.8398220244716351,
+          0.8826205641492265
+        ],
+        [
+          0.10567296996662959,
+          0.8553230209281165
+        ]
+      ]
+    },
+    {
+      "file": "02-shadow.png",
+      "width": 900,
+      "height": 1100,
+      "sha256": "5bc652034b99d73d0aaa5a4cda03ccd107128c607cf4936a7590caab8c0027c0",
+      "construction_corners": [
+        [
+          0.1557285873192436,
+          0.09099181073703366
+        ],
+        [
+          0.8008898776418243,
+          0.13193812556869883
+        ],
+        [
+          0.8398220244716351,
+          0.8826205641492265
+        ],
+        [
+          0.10567296996662959,
+          0.8553230209281165
+        ]
+      ]
+    },
+    {
+      "file": "03-no-boundary.png",
+      "width": 900,
+      "height": 1100,
+      "sha256": "44cf358d2d960ba986f3a47deb3fccc0151d830691ead4a04c2e34ff0923cd1f",
+      "construction_corners": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "file": "04-highlight.png",
+      "width": 900,
+      "height": 1100,
+      "sha256": "a5566bc41eace4936093b0f94462ac2775caddd0ee9174477998fea7de8a86fa",
+      "construction_corners": [
+        [
+          0.1557285873192436,
+          0.09099181073703366
+        ],
+        [
+          0.8008898776418243,
+          0.13193812556869883
+        ],
+        [
+          0.8398220244716351,
+          0.8826205641492265
+        ],
+        [
+          0.10567296996662959,
+          0.8553230209281165
+        ]
+      ]
+    },
+    {
+      "file": "05-fold-light-simulation.png",
+      "width": 900,
+      "height": 1100,
+      "sha256": "bad654c48a04eea2b05e8eaa1e7dfe90f84bc0bd2d71d8584c87606114d348b7",
+      "construction_corners": [
+        [
+          0.1557285873192436,
+          0.09099181073703366
+        ],
+        [
+          0.8008898776418243,
+          0.13193812556869883
+        ],
+        [
+          0.8398220244716351,
+          0.8826205641492265
+        ],
+        [
+          0.10567296996662959,
+          0.8553230209281165
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "frozen_at_utc": "2026-10-26T04:45:10.619065+00:00",
+  "snapshot": {
+    "freeze_id": "mvp13-freeze-v1",
+    "algorithms": {
+      "pipeline_version": "scan-v1",
+      "detection": {
+        "version": "detect-v1",
+        "preset": "revised",
+        "analysis_max_edge": 1200,
+        "gaussian_kernel": 5,
+        "closing": true,
+        "canny_pairs": [
+          [
+            20,
+            60
+          ],
+          [
+            50,
+            150
+          ],
+          [
+            75,
+            200
+          ]
+        ],
+        "epsilon_ratios": [
+          0.015,
+          0.02,
+          0.03
+        ],
+        "max_contours": 30,
+        "min_area_ratio": 0.1,
+        "min_side_ratio": 0.05,
+        "score_weights": {
+          "a": 0.45,
+          "e": 0.35,
+          "f": 0.2,
+          "b": -0.15
+        },
+        "nms_iou_strict_gt": 0.95,
+        "proposal_threshold": 0.6,
+        "warning_threshold": 0.4,
+        "support": "raw Canny, radius 2 analysis pixels, sample spacing <=2 pixels",
+        "region_fallback": "Otsu bright external component only if all Canny trials lack quads"
+      },
+      "enhancement_comparison": "enhancement-comparison-v1",
+      "detection_ablation": "detection-ablation-v1"
+    },
+    "presets": {
+      "color": {
+        "mode": "color",
+        "corners": null,
+        "confirmed": false,
+        "rotation": 0,
+        "denoise": {
+          "method": "none",
+          "kernel": 3
+        },
+        "contrast": {
+          "method": "none",
+          "clip_limit": 2.0,
+          "tile_grid": [
+            8,
+            8
+          ]
+        },
+        "threshold": {
+          "method": "adaptive_gaussian",
+          "block_size": 31,
+          "c": 10
+        },
+        "geometry": {
+          "aspect_policy": "estimated",
+          "max_long_edge": 2400
+        }
+      },
+      "gray": {
+        "mode": "gray",
+        "corners": null,
+        "confirmed": false,
+        "rotation": 0,
+        "denoise": {
+          "method": "none",
+          "kernel": 3
+        },
+        "contrast": {
+          "method": "clahe",
+          "clip_limit": 2.0,
+          "tile_grid": [
+            8,
+            8
+          ]
+        },
+        "threshold": {
+          "method": "adaptive_gaussian",
+          "block_size": 31,
+          "c": 10
+        },
+        "geometry": {
+          "aspect_policy": "estimated",
+          "max_long_edge": 2400
+        }
+      },
+      "bw": {
+        "mode": "bw",
+        "corners": null,
+        "confirmed": false,
+        "rotation": 0,
+        "denoise": {
+          "method": "median",
+          "kernel": 3
+        },
+        "contrast": {
+          "method": "none",
+          "clip_limit": 2.0,
+          "tile_grid": [
+            8,
+            8
+          ]
+        },
+        "threshold": {
+          "method": "adaptive_gaussian",
+          "block_size": 31,
+          "c": 10
+        },
+        "geometry": {
+          "aspect_policy": "estimated",
+          "max_long_edge": 2400
+        }
+      }
+    },
+    "source_sha256": {
+      "backend/app/api/artifacts.py": "53d0f7e2f798f21192628846088b19b10130f5b036c433ae4b2b847e6ed0ad4c",
+      "backend/app/api/errors.py": "17e29ced5c4ac7df6b77c4c3b7aeb3827748605962eb889fe84264d2f28275c2",
+      "backend/app/api/exports.py": "dd0d6bad9c3a0208afd39e231e7f7e54b41585fc7bafc8890ea87ec1b590432c",
+      "backend/app/api/pages.py": "b783d19a6a58aed489420024dbfbd367f8e7a8b1039eecc0446930013fdd2cde",
+      "backend/app/api/sessions.py": "427c7b98d8d9b9ceb2758a46e719ddb4b43304cd269c4105cb5ab2be009f2128",
+      "backend/app/export/__init__.py": "67bbc791add4163e75fac7336bb1b9fe8f38984914b944a7de66113f3001fc31",
+      "backend/app/export/images.py": "3c689b9138ad67212eb9da7865c1bba0e905d17da3079e3800b8cc4cfe03a21f",
+      "backend/app/export/pdf.py": "2fcd2e4d268de35ddb76ca67e8671177d302235f28fe45b7aa5bd16314c96059",
+      "backend/app/main.py": "5b870c79f867ace154a599dd217aede27e3fe260f920239560d9c0da4492dd99",
+      "backend/app/processing/config.py": "c9173d6f96b80509d84852e8e0418cde06418508f6c97b7ed843635226d99e2a",
+      "backend/app/processing/detection.py": "958472b5aeae16c965d47556367bc5805572b8c473d70d7a48a0fa079f5e14a7",
+      "backend/app/processing/enhancement.py": "52c03b0eb9b60731f488a1c4f8c36424283b9638bf5b95bb66478314ae7fbdb3",
+      "backend/app/processing/geometry.py": "18081c7b9b2ab16a0cf96a8433a2ec2a2135c3407d1a6c42adf53d3a3de56483",
+      "backend/app/processing/histogram.py": "9363aa9c56a21de9805171a86d0582fb01325237debb8a64e350272fe491a8e8",
+      "backend/app/processing/image_sizes.py": "65d64ac4902c1e06c720f30aa53febe4507b5588fb3ad0ba999f3245af19b598",
+      "backend/app/processing/normalize.py": "12e6e40cfec98cb57b0967196ff94f36efb5a05544dd1b58d37794e1f62eae78",
+      "backend/app/processing/polygon_metrics.py": "56deb6e0543b5cdf304ccf9e1506cd5e2e4f93a622498598d9a74bc540fe9516",
+      "backend/app/processing/render.py": "0c49dad24df90958db9ee1504a20ffd584ff0984e51c7ab6a387c7ed86087d67",
+      "backend/app/schemas/common.py": "0ab8d632f82fa61387ed4de4951e8e79c50f2c31b28c81f9736df0f54b612662",
+      "backend/app/schemas/errors.py": "148d4b9215a393fe588e6ae9681a7ca135d501652f49176ac243ca834ad1d3fd",
+      "backend/app/schemas/exports.py": "e206dd7c98cbdcd933af4d2d0d691d66af15bc45d2be34a1dfd3ef3e04e1d905",
+      "backend/app/schemas/pages.py": "0dde6d4c97491ccbf6bc9d1c77692f4e49af2e594ff6fd55b047ac3fd847ecae",
+      "backend/app/schemas/sessions.py": "03787eb7f0bdba0ccee6dc5bfb91795c1b181fed2b043b91d6c6d9d576a797b3",
+      "backend/app/services/debug.py": "e88682c64647a4479ed2286ccbd0a1620a5fd7396c149fa35830c8584743b1a6",
+      "backend/app/services/deletions.py": "4b0cadc0101fa032342252ce0e59906f1a29721c274c5fba52edf70f20ac63b2",
+      "backend/app/services/detection.py": "6c888d6aaee87ddcbde61d615f472682260463b5559d1b5e41e37a098a31ffda",
+      "backend/app/services/exports.py": "8637b647dc20e62f4b62a65823a1ee41a8290b91235b9ef9dba6372b2b6b20b6",
+      "backend/app/services/imports.py": "29d8c11badf3825e613d966fdab18dab92899e7c4d04c3dd7193715cdaa5d01b",
+      "backend/app/services/page_config.py": "b603ca2788d1ba44e5215609554b6c67e81737c535b787ab79ad2eddd3be9e64",
+      "backend/app/services/page_history.py": "2cb0fb9a646bcd2b8de22f165dd56cc47a9ac62131e66c7e6396ef7029312e3a",
+      "backend/app/services/processing_executor.py": "845927eb7b268f70b1ba1765be64932ed49a2491d0c502f182d715ff960d494b",
+      "backend/app/services/render_debug.py": "7cd306b2bf1ada2dc244f5bd67c20573731543aa2299c3448eda1fa4d25ea3e3",
+      "backend/app/services/renders.py": "6c9147cc128cdf46f956cd49a20316e2078f9ccee1f848bba7bf40abcefe37c1",
+      "backend/app/services/session_guards.py": "1868045d8501074b084a31e562c52491aee1b5e5833f82b3eb4a4ce593e9c2ee",
+      "backend/app/services/sessions.py": "51ef102a0fb5818a853902911973eebadfd1b2e91a574ff0306debccab1029c5",
+      "backend/app/services/sources.py": "48b947290e5c33539faab9e3f628202499df8ae81b51c6b35a85182ffa551fc2",
+      "backend/app/settings.py": "0151d6d59e162575093dfea48b8dc6882de00efe114b36c80bf00daa5c6ca372",
+      "backend/app/storage/database.py": "840e472f24e91850dbfd17f1af1359de5929609e567cd1670a88fa7760827d68",
+      "backend/app/storage/files.py": "6f7f849de004c3be43f03bf7bd23321bde7d2e250ad7278a7da343d0e15f9a26",
+      "backend/app/storage/models.py": "c2fb365abd1f9a55f2bc8f62b546af6645de2dc1442ffed4a4aa2b91bee8b2a3",
+      "backend/app/storage/repository.py": "4c08cf5f138d07f175e2b6e04b7120c428f63a8639e95a13d17977f74c4a1284",
+      "experiments/compare_detection.py": "450b92a9777bc921c2ee97e5fda2c3f5c8e0bebf209330abe752a23fb18b8dd1",
+      "experiments/detect_batch.py": "69db5fb980183d121b73e814855bf825f605f790107f7684a8b969c5de524db2",
+      "experiments/detection_artifacts.py": "24065e8ef9ff36ee0c4a5260f7532d6eb94d4286e978b4dd4ff05e157dd04f4b",
+      "experiments/enhancement_demo.py": "758af3cba38ebdaefa2797f3b9070ef1acb995cfb09c14e54ebc152e28a456d6",
+      "experiments/evaluate_detection.py": "ff98740cb4ac50297b5937203c01425dcc7f4064da588bcc76359d5517311fc7",
+      "experiments/evaluate_enhancement.py": "71bbbbf0af595032511696c7b0e68fcc65f26fd335b61ba241e76b268a2ebee0",
+      "experiments/freeze_config.py": "1e21be235b005ffbe727fed789e024d89e5bb83071b41e4715aa2d9992c84930",
+      "experiments/geometry_demo.py": "2569b93a06b2fc88962554a59fea98ee14eceab80727f3b499dc947728c9c1fa",
+      "experiments/metrics.py": "f0327c9a1715aa3ef5875e144fc2b6e2e86c5daa2c8841bc7a119e807651b829",
+      "experiments/normalize_one.py": "e6a14fb80f87cab808dd5948c2dec7f06af2b7522ffa98244c52698562e40482",
+      "experiments/scan_one.py": "3122ee7121b5c29e473001eaf7c646dcee4f8026fc800d522afd6a92d7210b40",
+      "experiments/validate_annotations.py": "2067cd07bad61dcada8d26417cc1bfe77c0b1cd72dfb9af380a6ac9773e001b8",
+      "experiments/validate_dataset.py": "740a20b12e078cfba5cb900b60a2ee20750c18dfed4da724774e491fbe82f8ae",
+      "frontend/src/api/client.test.mjs": "66ed62fbfbeda7d7af8e5ed465e2c81338eda77c963b745d911466ffd4b89ac9",
+      "frontend/src/api/client.ts": "28695e9298859c11989df3ee62b7e75ab7065912d446466ced0c911bc9b589a5",
+      "frontend/src/App.tsx": "e21c41973ed0730af34ff5eea6d95d07ce90842c2d62d6583c92acdf82b79cac",
+      "frontend/src/components/CandidateMetrics.tsx": "57ca5c5f7f56aa46a64189f528f9411328c4ee0f27cd4c88156a30ff56af60e4",
+      "frontend/src/components/ComparisonView.tsx": "39c82d1467c331179527860a694f9a80392528f30b3f64294811eeff93393bc6",
+      "frontend/src/components/ConfirmDeletion.tsx": "86eec649c69cafa6e8ba1931f8dc3ee582916300cf167350e76a4866bfcc2652",
+      "frontend/src/components/CornerEditor.tsx": "3f68b81589e015eda9369b2b0433d6ae5bb62b1d47c69022cd215716c3b24d42",
+      "frontend/src/components/cornerGeometry.test.mjs": "fe6a120abe1fab5d7b5589164787fd5586d6d0a7485f3857cd1292e2fe7f0b7e",
+      "frontend/src/components/cornerGeometry.ts": "6a5f52c95ea14f4b41fd7f7587680daf88286639d53d24b86303f09ba08ffa17",
+      "frontend/src/components/detectionProposal.ts": "f42d137e75656aa894f291313484c29f191cd3f3cc609b3dce65b837961c538e",
+      "frontend/src/components/documentActions.test.mjs": "7fe1f0bae184aa88b1ea92c04ca632720909de2e6ab569a630822f10df75d192",
+      "frontend/src/components/documentActions.ts": "a7d4fe8b14c94d6a0736974a9369e8de042ba9e18bb2ca5a51b2f8f7cea4e67c",
+      "frontend/src/components/DocumentTitleForm.tsx": "b25184daf2e2e30bb22aff31f5c7e5d8c585fa855e7044e48565b7e30e028a8d",
+      "frontend/src/components/exportFlow.test.mjs": "3e2bfeea1d13cc907f5601d5552e98a18c883408559759abc3d0456928802839",
+      "frontend/src/components/exportFlow.ts": "9e2a4eb41fda3804a231bc6fe5265bad1a7007bc13e981e89438c91caee3edd2",
+      "frontend/src/components/ExportPanel.tsx": "94b8760a6c239fe19a59720e5bb6ad0da98715dd2353e7986c1336568c6044b9",
+      "frontend/src/components/FilterPanel.tsx": "156e44108bed307149c731b9357a1d9caea9328cf49600646080538befd6f912",
+      "frontend/src/components/HistogramView.tsx": "bdb5b1071b58c16a8959d982aa3409b8f2ff1e8d9ff4c3056397614ba3af4e59",
+      "frontend/src/components/importDetection.test.mjs": "b54b04793c79fa87ef4eac04033f02eb81452dc6c957bda1d2dedeaae8fe6010",
+      "frontend/src/components/importDetection.ts": "fa217ad451e19d69ed0d06b691f61388cb04a9a90aca3f6f8d8f2fe3a5b50e29",
+      "frontend/src/components/PageList.tsx": "dafb37b662ada4c48e87d89fd1afbd5a9a7460960cd8b1f9be43c57b01b85340",
+      "frontend/src/components/pipelineData.test.mjs": "ca4e50d6f43801f60ffd9df2fab220ba11ce09838dbfdb422ab710daeb3bf94d",
+      "frontend/src/components/pipelineData.ts": "7751146b5771df9fdc4c1316417f9686ca862624056b5767e300b98949635369",
+      "frontend/src/components/pipelineExplanation.ts": "2a7d9a95b2109ae6d99e6732563a2b3e90c683e1b5fb2dfa3c2e29196aa9c89d",
+      "frontend/src/components/PipelineViewer.tsx": "9a84cc4fd0220a234b7d00fb534a82082544aa776ea35e8b48127d6ed69111b8",
+      "frontend/src/components/SourcePreview.tsx": "21447afb66646e2c464877ce82b654d72582cef68e0d0dcb0ff426610e6cb87d",
+      "frontend/src/components/uploadBatch.test.mjs": "e8abbb6adf1551ade8875c7ccd510eca0691e1e26744aeefecf027c2463ad224",
+      "frontend/src/components/uploadBatch.ts": "1d8176e06b9654770b7912e0698769fc4a9b42d547dea91fb8640ce093ef83cb",
+      "frontend/src/components/UploadPanel.tsx": "f166ff74f89a1e86c7c77e4bc3a45018d2ea4998692b5a88b50b29dcdfebd91d",
+      "frontend/src/hooks/debugState.ts": "97bb4b42b2fe4caddf38257e3e698bcbb77ef6bc7a66ddf45a5328865a3a19e6",
+      "frontend/src/hooks/pageRenderState.test.mjs": "f1aa807ac844fab20eb0d81c8e697c096ba0ca25c4bd8aba861c367795e08f1e",
+      "frontend/src/hooks/pageRenderState.ts": "52cfcb6062cd14c7d320e2357ce97f0eaa7db7635ea77b5f384fee5246c1b116",
+      "frontend/src/hooks/usePageRender.ts": "1f9bd5aba9dfcdece33505cdcf2e4be2fd8de69ddbc99f6fb17be41227f89079",
+      "frontend/src/main.tsx": "11790beed23a43c5364569e2bb65d0c19241453cf94b226621eb5874e1e46e81",
+      "frontend/src/pages/ScannerPage.tsx": "2247f91518059add5cc0c464ef9752beec8fbcc9fdefaa37a01eeebb462981cf",
+      "frontend/src/styles.css": "bc64e92d3cfdac372a0f0b98bd20f1f8ee6479591ed40206a7351e754d8f736e",
+      "frontend/src/types/scanner.ts": "2bdf5cc37833d3034a2766dcfccf8271107e68ca59357421839a5712b9607e18"
+    },
+    "input_sha256": {
+      "backend/requirements.txt": "4be3ab6d12678812a1857c5b24d568bd3d8fccf2e32820246e39580191cfa67a",
+      "backend/pyproject.toml": "046ad8748913c7df1e00a8576062099b97e8703a58ae0996607aa06f13237e53",
+      "frontend/package.json": "84bc70376b484e8c95d276dc2f8c2994603d4273f531692f37aab305e7f2c5f6",
+      "frontend/package-lock.json": "a32bab86fe19ebd0a1f69071687a0a6a01714f3439a1e22fe164cc4c3428395f",
+      "frontend/vite.config.ts": "5797b98e9c18e6518349bbf2c964317d5ab6b5047d9041b950bcb6a816aad535",
+      "frontend/tsconfig.json": "b982eb0dc33968dad5996114ebd8334b5404a36fc916f5875e3ddae40c92fdf7",
+      "experiments/dataset_manifest.csv": "5c4a4e812bbb6cbb4983f3f9b62344fbeb7952b43ef7c59be98f810b5e1ed399",
+      "experiments/annotations.json": "ad4d2d07ed569deb5028cfe53f5190472dd034baa4f4e9b23a9c892ee19e758f",
+      "experiments/configs/detection_trials.json": "e5de180eb0f56032df5f35769ccc67ec8dd91209d15cd9a8416a12331e5aaaf9"
+    },
+    "python_dependencies": {
+      "annotated-doc": "0.0.5",
+      "annotated-types": "0.8.0",
+      "anyio": "4.15.1",
+      "charset-normalizer": "3.5.2",
+      "click": "8.5.0",
+      "colorama": "0.4.6",
+      "fastapi": "0.143.0",
+      "h11": "0.16.0",
+      "httpcore2": "2.13.1",
+      "httpx2": "2.13.1",
+      "idna": "3.20",
+      "iniconfig": "2.3.1",
+      "numpy": "2.5.4",
+      "opencv-python-headless": "4.14.0.94",
+      "opentelemetry-api": "1.45.1",
+      "packaging": "26.3",
+      "pillow": "12.3.0",
+      "pip": "25.0.1",
+      "pluggy": "1.6.0",
+      "pydantic": "2.14.1",
+      "pydantic-core": "2.50.1",
+      "pygments": "2.21.0",
+      "pytest": "9.1.1",
+      "python-multipart": "0.0.32",
+      "reportlab": "5.0.1",
+      "sqlalchemy": "2.1.4",
+      "starlette": "1.8.0",
+      "truststore": "0.10.5",
+      "typing-extensions": "4.16.0",
+      "typing-inspection": "0.4.4",
+      "uvicorn": "0.54.0"
+    },
+    "frontend_dependencies": {
+      "react": "19.3.0",
+      "react-dom": "19.3.0",
+      "@types/react": "19.3.0",
+      "@types/react-dom": "19.3.0",
+      "@vitejs/plugin-react": "6.1.2",
+      "typescript": "7.0.2",
+      "vite": "8.3.4"
+    },
+    "environment": {
+      "python": "3.12.10",
+      "implementation": "CPython",
+      "platform": "Windows-11-10.0.26300-SP0",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 167 Stepping 1, GenuineIntel",
+      "logical_cpus": 16,
+      "node": "v24.15.0",
+      "npm": "11.12.1",
+      "opencv": "4.14.0",
+      "opencv_threads": 16,
+      "opencv_optimized": true,
+      "opencv_opencl": false,
+      "opencv_build_sha256": "af00e2dfa7a2b51a1d2b0f04f56a17ce3cf1f9aab0b988e4f8e4890dab803d04"
+    },
+    "data_policy": {
+      "images": 13,
+      "documents": 2,
+      "development_images": 6,
+      "test_images": 7,
+      "development_documents": 1,
+      "test_documents": 1,
+      "test_images_processed_before_freeze": 0,
+      "tuning": "development only; keep failed cases; do not overwrite this freeze after test",
+      "future_runner": "verify_frozen before held-out runs; hash new benchmark script separately"
+    }
+  },
+  "regression": {
+    "sha256": "d412881f76aac1e490f194d26da311c4487e992490ec5ae653c15b63eb5461c7",
+    "summary": {
+      "status": "passed",
+      "backend_experiments_tests": 1255,
+      "frontend_tests": 103,
+      "frontend_build_typecheck": true,
+      "browser_smoke": true,
+      "route_checks": true,
+      "physical_restart": true,
+      "pdf_pages_read_rendered": 2,
+      "full_core_byte_equal": 2,
+      "qa_artifact_hashes_preserved": 38,
+      "old_sql_rows_preserved": 61,
+      "old_artifacts_preserved": 49,
+      "postrestart_ui_only_get": true,
+      "openapi_paths": 12,
+      "test_dataset_images_processed": 0,
+      "enhancement_pairs": 3,
+      "unlabelable": 3,
+      "synthetic_highlight_separate": true,
+      "stage_pngs_hash_dimensions_verified": 28,
+      "scope": "User authorized regression required for 13.06; does not certify all phase 12 tasks.",
+      "browser_steps": [
+        "new QA document",
+        "batch paper/fake/paper: 2 success, 415 in between",
+        "auto detection for both pages, draft only",
+        "confirm page 1 and render Color",
+        "page 2 BW Otsu, confirm",
+        "export PDF2: 409 missing render -> render once -> 201",
+        "browser download exact API bytes",
+        "physical restart -> reopen r1/full with GET only",
+        "100% full view; console errors/warnings empty"
+      ],
+      "log_sha256": {
+        "pytest.log": "3967f26f0b654241f71a86834e6c348f1920f05a0d4e93a77e21ac50de9da56f",
+        "frontend-test.log": "2e9567e5f7c44f9a2d04df258c146a86ceb4ce497f59a86c633891f99852bdeb",
+        "frontend-build.log": "b2dbb1bc0ed63912c07c00941f6f7f0c53aca651fa23601b9ef03a0ccb7102cb"
+      }
+    }
+  }
+}
