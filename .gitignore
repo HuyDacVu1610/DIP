@@ -24,6 +24,7 @@ coverage/
 /data/
 /datasets/
 /experiments/results/
+experiments/dataset_manifest-mvp13-locked.csv
 /.tmp/
 /output/
 /.chart-data-*/
