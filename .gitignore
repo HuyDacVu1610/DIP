@@ -23,7 +23,6 @@ coverage/
 # Runtime data, private datasets and temporary files
 /data/
 /datasets/
-/experiments/data/
 /experiments/results/
 /.tmp/
 /output/
