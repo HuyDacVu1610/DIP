@@ -4,10 +4,6 @@
 hiệu chỉnh phối cảnh, tạo bản quét Color/Gray/BW và xuất ảnh hoặc PDF nhiều trang.
 Ứng dụng lưu trên máy, chạy bằng React/TypeScript/Vite + FastAPI/OpenCV + SQLite/ReportLab.
 
-[Mở gói nộp](SUBMISSION.md) · [Demo và bảo vệ](docs/demo-script.md) ·
-[Hướng dẫn sử dụng có ảnh](docs/user-guide.md) · [Checklist](tasks/todo.md) ·
-[Báo cáo thuật toán/thực nghiệm](docs/report.md) · [Kết quả thực nghiệm](docs/results.md) · [Cấu hình bản chạy](docs/local-runtime.md)
-
 ## Cài và mở ứng dụng trên Windows
 
 Môi trường đã kiểm chứng: **Python 3.12.10 64-bit, Node.js 24.15.0, npm 11.12.1**.
@@ -16,7 +12,7 @@ Dùng thư mục giải nén có đường dẫn ngắn, tránh lồng nhiều c
 Dùng PowerShell. Thay đường dẫn ví dụ dưới đây bằng thư mục chứa README này trên máy bạn:
 
 ```powershell
-Set-Location 'C:\Users\03201\OneDrive\Desktop\XU_LY_ANH'
+Set-Location 'C:\Users\03201\OneDrive\Desktop\XU_LY_ANH' //set location phù hợp với máy bạn
 python --version
 node --version
 npm.cmd --version
@@ -54,7 +50,6 @@ Invoke-RestMethod 'http://127.0.0.1:8000/api/v1/health'
 ```
 
 Kết quả phải có `status = ok`. Health chỉ kiểm tra server đáp ứng, chưa chứng nhận một ảnh quét đúng.
-[Swagger UI](http://127.0.0.1:8000/docs) dành cho xem/thử API.
 
 Dừng bằng **Ctrl+C** trong terminal chạy Uvicorn, chờ `Application shutdown complete`.
 Ngày sau chỉ chạy lại lệnh Uvicorn; không cần cài lại hoặc build lại nếu source không đổi.
@@ -69,9 +64,6 @@ Lượt kiểm chứng README dùng bản source/venv/node_modules/DB riêng tr�
 3. Chọn Color/Gray/BW và bộ lọc → **Tạo bản quét**; xem so sánh, zoom hoặc ảnh trung gian.
 4. Trong **Xuất tài liệu**, chọn trang và PDF; PNG/JPG yêu cầu đúng một trang.
    Bấm **Tạo tệp xuất → Tải**. Trang đã xác nhận còn thiếu bản quét sẽ được xử lý khi xuất.
-
-[Hướng dẫn chi tiết](docs/user-guide.md) giải thích nháp chưa lưu, xác nhận, trạng thái bận,
-khôi phục sau restart và các lỗi thường gặp. Có hai ảnh tổng hợp đi kèm để tự thử.
 
 ## Dữ liệu được lưu ở đâu?
 
@@ -124,8 +116,7 @@ $scannerTestDirectory = 'C:\Users\03201\OneDrive\Desktop\XU_LY_ANH\.tmp\pytest-m
 & .\backend\.venv\Scripts\python.exe -m pytest -c backend/pyproject.toml backend/tests experiments/tests -q -W error --basetemp $scannerTestDirectory
 ```
 
-Thay đường dẫn bằng thư mục thử mới phù hợp máy bạn. Lượt kiểm gói nộp giữ lại lỗi đường dẫn262ký tự
-và đã chạy đủ1.279tests với basetemp ngắn; không sửa thuật toán/storage hoặc bỏ test để vượt lỗi.
+Thay đường dẫn bằng thư mục thử mới phù hợp máy bạn. Không sửa thuật toán/storage hoặc bỏ test để vượt lỗi.
 
 ## Giới hạn và kiến trúc
 
@@ -140,9 +131,7 @@ không làm phẳng nhàu nặng, khôi phục chữ bị che/cháy sáng hoặc
 Detector vẫn có thể chọn nền bàn; BW có thể giữ ô ly hoặc làm đứt nét, Otsu có thể làm đen vùng bóng.
 
 `backend/app/processing/` độc lập HTTP/DB/UI; API/service xử lý revision/lưu bền,
-`storage/` quản lý SQLite/artifact, `frontend/src/` quản lý giao diện. Preview lấy từ full render,
-xuất dùng đúng bản quét/config/revision đã lưu. [Hợp đồng ảnh](docs/image-contract.md),
-[API](docs/api-contract.md), [bản đồ thư mục](docs/project-map.md), [hướng thuật toán](docs/Phan_Tich_Huong_Thuat_Toan_Tu_Tai_Lieu.md).
+`storage/` quản lý SQLite/artifact, `frontend/src/` quản lý giao diện.
 
 ## Dành cho phát triển và kiểm chứng
 
@@ -154,10 +143,6 @@ npm.cmd --prefix frontend test
 npm.cmd --prefix frontend run typecheck
 ```
 
-Kiểm lại từ ZIP giải nén sạch ở14.08: **1.279 backend/experiments tests** đạt144,66s,
-frontend **103 tests**, typecheck/build đạt. Xem [checklist gói nộp](docs/submission-checklist.md)
-và [audit8task](docs/audit-phase-14.md) cho phạm vi kiểm, lỗi đường dẫn và bằng chứng browser/PDF/restart.
-Trong sandbox tự động hóa TestClient có thể cần quyền IPC/tệp tạm; PowerShell thông thường không cần đổi code.
 
 Để sửa React với Vite, giữ backend8000 chạy rồi mở terminal thứ hai ở root:
 
@@ -167,15 +152,3 @@ npm.cmd --prefix frontend run dev
 
 Vite tại [5173](http://127.0.0.1:5173/) proxy `/api` sang8000; giao diện build vẫn dùng8000.
 Vite đặt strictPort: nếu5173 bận, dùng instance hiện có hoặc dừng instance của bạn trước khi mở lại.
-
-CLI ảnh offline và metadata: [mốc M1](docs/milestone-m1.md), [ghi chú thuật toán](docs/algorithm-notes.md).
-Dataset/nhãn: [quy ước](docs/dataset.md), [manifest](experiments/dataset_manifest.csv).
-Thực nghiệm13 giữ snapshot/runner/hash lịch sử; bản đóng gói có hash riêng, cổng freeze13 sẽ từ chối mã đóng gói.
-Không ghi đè frozen để chạy lại hoặc tune tập test đã thấy. [Môi trường](docs/experiment-environment.md),
-[phương pháp đo](docs/benchmark-method.md), [kết quả và giới hạn](docs/results.md).
-
-## Tiến độ và phạm vi
-
-MVP01.01–07, 02–11 và 13–14 xong: **102 task chính, 13 AUX**; MVP01.08 bỏ qua. M4 kỹ thuật đạt26/10/2026: bản chạy cùngorigin localhost8000, sourceZIP/manifest/checksum, cài sạch đúnglock/1.279backend-experiments+103frontendtests/typecheck/build, README/hướng dẫn/báo cáo sốliệu thật vàdemo5–7phút đãkiểm. RehearsalUI sau nhập5phút21giây, PDF3trang/restart65artifact đạt; chưa có lượt tập nói hoặc thủ tục nộp hành chính. Đã rà đủ8task14/AUX14.01; giữlõiảnh/preset/lock/manifest/nhãn/frozen13, chỉ sửa một dòng chú thích dataset trênUI. Giai đoạn12 còn7task chưa nghiệmthu và5optional chưa làm; không tựtích theo cổng hồi quy trước khóa. Giữ ca sai development và giới hạn mỗi split một tài liệu.
-[Kế hoạch](tasks/plan.md), [checklist tiến độ duy nhất](tasks/todo.md),
-[phạm vi MVP](docs/MVP_Pham_Vi_Va_Ke_Hoach_4_Tuan.md), [đặc tả gốc](Document_Scanner_Dac_Ta_Kien_Truc_Thuat_Toan.md).
